@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  test:
+    image: php:8.2-cli
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: |
+      bash -c "
+        set -e &&
+        apt-get update -qq &&
+        apt-get install -y git unzip curl &&
+        curl -sS https://getcomposer.org/installer | php &&
+        mv composer.phar /usr/local/bin/composer &&
+        composer install --no-interaction --prefer-dist &&
+        echo '✅ Running Extended Grammars Tests...' &&
+        vendor/bin/phpunit --colors=always &&
+        vendor/bin/pint &&
+        vendor/bin/psalm
+      "
