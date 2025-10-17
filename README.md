@@ -1,5 +1,11 @@
 # Laravel Extended Grammars
 
+
+[![Packagist Version](https://img.shields.io/packagist/v/ishifoev/laravel-extended-grammars?style=flat-square)](https://packagist.org/packages/ishifoev/laravel-extended-grammars)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/ishifoev/laravel-extended-grammars?style=flat-square)](https://packagist.org/packages/ishifoev/laravel-extended-grammars)
+[![License](https://img.shields.io/github/license/ishifoev/laravel-extended-grammars?style=flat-square)](LICENSE)
+
+
 > 🧩 Extends Laravel's database grammars with advanced SQL helpers like `insertOrUpdateUsing()` for MySQL, PostgreSQL, and SQLite.
 
 ---
